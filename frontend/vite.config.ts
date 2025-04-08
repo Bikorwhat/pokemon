@@ -6,5 +6,6 @@ export default defineConfig({
 	build: {
 		outDir: '../',
 		ssrEmitAssets: true,
+		emptyOutDir: true,
 	},
 });
