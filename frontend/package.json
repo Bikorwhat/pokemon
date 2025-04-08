@@ -2,7 +2,6 @@
 	"name": "pokemon",
 	"private": true,
 	"type": "module",
-	"proxy": "http://localhost:8000",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
