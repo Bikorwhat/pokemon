@@ -3,3 +3,4 @@ virtual/
 node_modules/
 assets/
 index.html
+!frontend/index.html
