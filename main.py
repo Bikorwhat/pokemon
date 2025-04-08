@@ -8,7 +8,7 @@ import os
 app = FastAPI()
 
 # Mount static files directory
-app.mount("/assets", StaticFiles(directory="assets"), name="assets")
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 templates = Jinja2Templates(directory="templates")
 
 def fetch_pokemon_data(id_or_name: str):

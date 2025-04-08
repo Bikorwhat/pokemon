@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+	base: './',
 	plugins: [react()],
 	build: {
-		outDir: '../',
-		ssrEmitAssets: true,
-		emptyOutDir: true,
+		outDir: '../static',
+		emptyOutDir: true
 	},
 });
