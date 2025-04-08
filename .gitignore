@@ -1,2 +1,5 @@
 __pycache__/
 virtual/
+node_modules/
+assets/
+index.html
