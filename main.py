@@ -1,15 +1,13 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 import requests
 import os
 
 app = FastAPI()
 
 # Mount static files directory
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static", html=True), name="static")
 
 def fetch_pokemon_data(id_or_name: str):
     try:
@@ -34,4 +32,4 @@ def get_pokemon(id_or_name: str):
 # Frontend route
 @app.get("/")
 async def serve_react():
-    return FileResponse('index.html')
+    return FileResponse(os.path.join("static", "index.html"))
