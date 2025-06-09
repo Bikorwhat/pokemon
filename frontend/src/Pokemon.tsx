@@ -64,7 +64,7 @@ function Pokemon() {
 			)}
 			{ pokemonData && (
 				<div>
-					<h2>{ pokemonData.name } (ID: { pokemonData.id })</h2>
+					<h2>{ pokemonData.name } (Pokedéx No. : { pokemonData.id })</h2>
 					<img src={ pokemonData.image} alt={ pokemonData.name } />
 					<p>
 						<strong>Types:</strong>
