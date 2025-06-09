@@ -54,7 +54,13 @@ function Pokemon() {
 				type="text"
 				value={ pokemonName }
 				onChange={ (event) => setPokemonName(event.target.value) }
-				placeholder="Enter Pokémon name or ID"
+				onKeyDown={(event) => {
+        			if (event.key === 'Enter') {
+            		fetchPokemon();
+        			}
+    			}}
+				placeholder="Enter Pokémon name or Pokedéx No."
+				
 			/>
 			<button onClick={ fetchPokemon }>Get Pokémon</button>
 			{ error && (
