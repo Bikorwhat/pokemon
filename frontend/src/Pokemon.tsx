@@ -70,14 +70,24 @@ function Pokemon() {
 			)}
 			{ pokemonData && (
 				<div>
-					<h2>{ pokemonData.name } (Pokedéx No. : { pokemonData.id })</h2>
-					<img src={ pokemonData.image} alt={ pokemonData.name } />
+					<h2>{ pokemonData.name } (Pokedéx No. { pokemonData.id })</h2>
+					<img 
+						src={pokemonData.image} 
+						alt={pokemonData.name} 
+						style={{
+							width: '100%',
+							maxWidth: '300px',
+							height: 'auto',
+							display: 'block',
+							margin: '0 auto'
+						}} 
+					/>
 					<p>
-						<strong>Types:</strong>
+						<strong>Types : </strong>
 						{ pokemonData.types.join(', ') }
 					</p>
 					<p>
-						<strong>Abilities:</strong>
+						<strong>Abilities : </strong>
 						{ pokemonData.abilities.join(', ') }
 					</p>
 				</div>
