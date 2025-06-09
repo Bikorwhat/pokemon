@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  app:
+  pokemon-app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,5 +10,4 @@ services:
     volumes:
       - ./main.py:/app/main.py
       - ./requirements.txt:/app/requirements.txt
-      - ./static:/app/static
     command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
