@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PokemonViewer from './PokemonViewer';
 
 interface PokemonData {
 	id: number;
@@ -73,7 +74,7 @@ function Pokemon() {
 			{ pokemonData && (
 				<div>
 					<h2>{ pokemonData.name } (Pokedéx No. { pokemonData.id })</h2>
-
+					<PokemonViewer modelUrl={`https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/${ pokemonData.id }.glb`}/>
 					<div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
 						<img 
 						src={pokemonData.front_image} 
