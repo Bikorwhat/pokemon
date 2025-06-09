@@ -5,7 +5,8 @@ interface PokemonData {
 	name: string;
 	types: string[];
 	abilities: string[];
-	image: string;
+	front_image: string;
+	back_image: string;
 }
 
 function Pokemon() {
@@ -37,7 +38,8 @@ function Pokemon() {
 				name: data.name,
 				types: data.types,
 				abilities: data.abilities,
-				image: data.image,
+				front_image: data.front_image,
+				back_image: data.back_image,
 			};
 
 			setPokemonData(formattedData);
@@ -71,7 +73,8 @@ function Pokemon() {
 			{ pokemonData && (
 				<div>
 					<h2>{ pokemonData.name } (Pokedéx No. : { pokemonData.id })</h2>
-					<img src={ pokemonData.image} alt={ pokemonData.name } />
+					<img src={ pokemonData.front_image} alt={ pokemonData.name } />
+					<img src={ pokemonData.back_image} alt={ pokemonData.name } />
 					<p>
 						<strong>Types:</strong>
 						{ pokemonData.types.join(', ') }

@@ -26,7 +26,8 @@ def get_pokemon(id_or_name: str):
         "id": data.get("id"),
         "types": [t["type"]["name"] for t in data.get("types", [])],
         "abilities": [a["ability"]["name"] for a in data.get("abilities", [])],
-        "image": data.get("sprites", {}).get("front_default")
+        "front_image": data.get("sprites", {}).get("front_default"),
+        "back_image": data.get("sprites", {}).get("back_default")
     }
 
 # Frontend route
